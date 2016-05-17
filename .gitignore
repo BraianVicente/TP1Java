@@ -1,0 +1,6 @@
+clean
+compile
+run_tests
+log
+**/*.class
+libs/
