@@ -4,11 +4,11 @@ import java.util.List;
 
 public class Calendario {
 
-    public boolean existePersona(String juan) {
+    public boolean existePersona(String nombre) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void agregarPersona(String juan) {
+    public void agregarPersona(String nombre) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
