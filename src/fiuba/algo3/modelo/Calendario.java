@@ -1,15 +1,20 @@
 package fiuba.algo3.modelo;
 
 import java.util.List;
+import java.util.Set;
+
+import java.util.HashSet;
 
 public class Calendario {
 
+    Set<String> personas = new HashSet();
+
     public boolean existePersona(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return personas.contains(nombre);
     }
 
     public void agregarPersona(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        personas.add(nombre);
     }
 
     public void agregarEvento(String estudiar_algebra, List<String> invitados, int i, int i0, int i1, int i2) {
