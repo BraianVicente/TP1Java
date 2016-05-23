@@ -18,8 +18,9 @@ public class Calendario {
         personas.add(nombre);
     }
 
-    public void agregarEvento(String estudiar_algebra, List<String> invitados, int i, int i0, int i1, int i2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void agregarEvento(String nombre, List<String> invitados,
+            int anio, int mes, int dia, int hora) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public boolean estaOcupado(String nombre,
