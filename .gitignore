@@ -4,3 +4,4 @@ run_tests
 log
 **/*.class
 libs/
+list_failing_tests
