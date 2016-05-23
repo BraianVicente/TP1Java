@@ -8,6 +8,7 @@ import java.util.HashSet;
 public class Calendario {
 
     Set<String> personas = new HashSet();
+    Set<String> recursos = new HashSet();
 
     public boolean existePersona(String nombre) {
         return personas.contains(nombre);
@@ -31,12 +32,12 @@ public class Calendario {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void agregarRecurso(String proyector) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void agregarRecurso(String nombre) {
+        recursos.add(nombre);
     }
 
-    public boolean existeRecurso(String proyector) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean existeRecurso(String nombre) {
+        return recursos.contains(nombre);
     }
 
 }
