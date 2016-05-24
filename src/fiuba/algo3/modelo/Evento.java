@@ -24,4 +24,9 @@ public class Evento {
     {
         return fecha;
     }
+    
+    public Boolean estaInvitado(String nombre)
+    {
+        return nombresDeInvitados.contains(nombre);
+    }
 }

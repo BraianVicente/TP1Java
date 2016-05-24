@@ -4,6 +4,7 @@ import fiuba.algo3.modelo.Evento;
 
 import java.util.Date;
 import java.util.Calendar;
+import java.util.List;
 import java.util.ArrayList;
 
 import org.junit.Assert;
@@ -22,4 +23,22 @@ public class EventoTest {
 	    new Evento("nombre", new ArrayList(), d);
 	}
 
+	@Test
+	public void testEstaInvitadoCasoAfirmativo()
+	{
+	    List<String> listaDeInvitados = new ArrayList<String>();
+	    listaDeInvitados.add("Jon Snow");
+	    Evento evento = new Evento("nombre", listaDeInvitados, new Date());
+	    
+	    Assert.assertTrue(evento.estaInvitado("Jon Snow"));
+	}
+	@Test
+	public void testEstaInvitadoCasoNegativo()
+	{
+	    List<String> listaDeInvitados = new ArrayList<String>();
+	    listaDeInvitados.add("Jon Snow");
+	    Evento evento = new Evento("nombre", listaDeInvitados, new Date());
+	    
+	    Assert.assertFalse(evento.estaInvitado("Ramsay Bolton"));
+	}
 }
