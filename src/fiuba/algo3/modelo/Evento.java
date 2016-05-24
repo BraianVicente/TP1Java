@@ -14,4 +14,9 @@ public class Evento {
         nombresDeInvitados = invs;
         fecha = f;
     }
+
+    public String getNombre()
+    {
+        return nombre;
+    }
 }
