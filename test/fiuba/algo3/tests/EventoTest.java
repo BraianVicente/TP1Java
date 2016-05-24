@@ -32,6 +32,7 @@ public class EventoTest {
 	    
 	    Assert.assertTrue(evento.estaInvitado("Jon Snow"));
 	}
+
 	@Test
 	public void testEstaInvitadoCasoNegativo()
 	{
