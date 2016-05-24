@@ -19,4 +19,9 @@ public class Evento {
     {
         return nombre;
     }
+    
+    public Date getFecha()
+    {
+        return fecha;
+    }
 }
