@@ -18,4 +18,13 @@ public class BolsaDeEventosTest {
 	    Assert.assertTrue(bolsa.estaVacia());
 	}
 
+	@Test
+	public void testBolsaConUnElementoNoEstaVacia() {
+	    BolsaDeEventos bolsa = new BolsaDeEventos();
+	    Evento e = new Evento("nombre", new ArrayList(), new Date());
+	    
+	    bolsa.agregar(e);
+	    
+	    Assert.assertFalse(bolsa.estaVacia());
+	}
 }
