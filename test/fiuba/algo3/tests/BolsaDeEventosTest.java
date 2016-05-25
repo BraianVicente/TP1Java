@@ -80,4 +80,21 @@ public class BolsaDeEventosTest {
 	    
 	    Assert.assertFalse(bolsaFiltrada.estaVacia());
 	}
+
+	@Test
+	public void testFiltrarPorFechaInexistente() {
+	    BolsaDeEventos bolsa = new BolsaDeEventos();
+	   
+	    Calendar cal = Calendar.getInstance();
+	    Date now = cal.getTime();
+
+	    cal.add( Calendar.DATE, 1 );
+	    Date tomorrow = cal.getTime();
+	    
+	    Evento e = new Evento("nombre", new ArrayList(), now);
+	    bolsa.agregar(e);
+	    BolsaDeEventos bolsaFiltrada = bolsa.filtrarPorFecha(tomorrow);
+	    
+	    Assert.assertTrue(bolsaFiltrada.estaVacia());
+	}
 }

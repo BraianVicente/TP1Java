@@ -29,6 +29,10 @@ public class BolsaDeEventos {
 
     public BolsaDeEventos filtrarPorFecha(Date fecha)
     {
-        return this;
+        BolsaDeEventos bolsaFiltrada = new BolsaDeEventos();
+        for (Evento e : elementos)
+            if (e.getFecha().equals(fecha))
+                bolsaFiltrada.agregar(e);
+        return bolsaFiltrada;
     }
 }
