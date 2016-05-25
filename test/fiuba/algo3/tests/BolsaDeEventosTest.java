@@ -5,6 +5,7 @@ import fiuba.algo3.modelo.BolsaDeEventos;
 
 import java.util.Date;
 import java.util.Calendar;
+import java.util.List;
 import java.util.ArrayList;
 
 import org.junit.Assert;
@@ -26,5 +27,23 @@ public class BolsaDeEventosTest {
 	    bolsa.agregar(e);
 	    
 	    Assert.assertFalse(bolsa.estaVacia());
+
+	}
+
+	@Test
+	public void testFiltrarPorNombreExistente() {
+	    BolsaDeEventos bolsa = new BolsaDeEventos();
+	   
+	    List<String> invitados = new ArrayList();
+	    invitados.add("Robb Stark");
+	    invitados.add("Catelin Stark");
+	    invitados.add("Walder Frey");
+	    invitados.add("Roose Bolton");
+	    Evento e = new Evento("Red Wedding", invitados, new Date());
+	    
+	    bolsa.agregar(e);
+	    BolsaDeEventos bolsaFiltrada = bolsa.filtrarPorNombre("Robb Stark");
+	    
+	    Assert.assertFalse(bolsaFiltrada.estaVacia());
 	}
 }

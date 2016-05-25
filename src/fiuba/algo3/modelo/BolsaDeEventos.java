@@ -16,4 +16,9 @@ public class BolsaDeEventos {
     {
         elementos.add(e);
     }
+
+    public BolsaDeEventos filtrarPorNombre(String n)
+    {
+        return this;
+    }
 }
