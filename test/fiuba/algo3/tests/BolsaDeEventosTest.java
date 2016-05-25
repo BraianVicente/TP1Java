@@ -63,4 +63,21 @@ public class BolsaDeEventosTest {
 	    
 	    Assert.assertTrue(bolsaFiltrada.estaVacia());
 	}
+
+	@Test
+	public void testFiltrarPorFechaExistente() {
+	    BolsaDeEventos bolsa = new BolsaDeEventos();
+	   
+	    Calendar now = Calendar.getInstance();
+	    Date date1 = now.getTime();
+	    Date date2 = now.getTime();
+	    // Notice how date1 has the same value as date2
+	    // They are, however, different objects
+	    
+	    Evento e = new Evento("nombre", new ArrayList(), date1);
+	    bolsa.agregar(e);
+	    BolsaDeEventos bolsaFiltrada = bolsa.filtrarPorFecha(date2);
+	    
+	    Assert.assertFalse(bolsaFiltrada.estaVacia());
+	}
 }

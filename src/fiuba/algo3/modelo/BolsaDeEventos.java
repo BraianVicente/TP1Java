@@ -1,5 +1,6 @@
 package fiuba.algo3.modelo;
 
+import java.util.Date;
 import java.util.Set;
 import java.util.HashSet;
 
@@ -24,5 +25,10 @@ public class BolsaDeEventos {
             if (e.estaInvitado(n))
                 bolsaFiltrada.agregar(e);
         return bolsaFiltrada;
+    }
+
+    public BolsaDeEventos filtrarPorFecha(Date fecha)
+    {
+        return this;
     }
 }
