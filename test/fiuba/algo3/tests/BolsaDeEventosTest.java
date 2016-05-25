@@ -46,4 +46,21 @@ public class BolsaDeEventosTest {
 	    
 	    Assert.assertFalse(bolsaFiltrada.estaVacia());
 	}
+
+	@Test
+	public void testFiltrarPorNombreInexistente() {
+	    BolsaDeEventos bolsa = new BolsaDeEventos();
+	   
+	    List<String> invitados = new ArrayList();
+	    invitados.add("Robb Stark");
+	    invitados.add("Catelin Stark");
+	    invitados.add("Walder Frey");
+	    invitados.add("Roose Bolton");
+	    Evento e = new Evento("Red Wedding", invitados, new Date());
+	    
+	    bolsa.agregar(e);
+	    BolsaDeEventos bolsaFiltrada = bolsa.filtrarPorNombre("Ramsay Bolton");
+	    
+	    Assert.assertTrue(bolsaFiltrada.estaVacia());
+	}
 }

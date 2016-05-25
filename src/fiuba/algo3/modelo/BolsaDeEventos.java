@@ -19,6 +19,10 @@ public class BolsaDeEventos {
 
     public BolsaDeEventos filtrarPorNombre(String n)
     {
-        return this;
+        BolsaDeEventos bolsaFiltrada = new BolsaDeEventos();
+        for (Evento e : elementos)
+            if (e.estaInvitado(n))
+                bolsaFiltrada.agregar(e);
+        return bolsaFiltrada;
     }
 }
